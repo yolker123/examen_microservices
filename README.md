@@ -32,6 +32,7 @@ minikube start
 
 kubectl apply -f node-deployment.yaml
 kubectl apply -f autoscaling_hpa.yaml
+kubectl apply -f node-service.yaml
 
 
 EXO2
