@@ -1,3 +1,4 @@
+#Scale the application horizontally for high availability
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:

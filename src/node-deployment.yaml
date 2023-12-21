@@ -1,3 +1,4 @@
+#Deploy the Dockerized web application from the previous question to a Kubernetes cluster. (You can use minikube, a cluster deployed on the cloud …)
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,7 +18,7 @@ spec:
         image: yolker123/examen-nodejs:latest 
         ports:
         - containerPort: 8080 
-        resources: #obligé de le precise sinon il y a une erreur
+        resources: #Set requests and limits for your deployment
           requests: 
             cpu: "250m" 
             memory: "100Mi" 

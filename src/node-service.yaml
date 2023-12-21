@@ -1,0 +1,18 @@
+# Make your application accessible from outside the cluster.
+
+# cluster ip -> interne
+# node port -> chaque noeud du cluster
+# load balancer -> externe
+
+#J'ai choisi LoadBalancer car c'est le seul qui permet d'accéder à l'application depuis l'extérieur du cluster avec nodePort mais semble plus simple
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: node

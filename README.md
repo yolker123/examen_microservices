@@ -40,7 +40,7 @@ Q1 : With microservices architecture, a program is created as a collection of ti
 
 Q2 : Microservices: - Benefits include ease of maintenance, scalability, flexibility, autonomous deployment, robustness, and integration with new technologies.  
 - Drawbacks: Complicated management, difficult inter-service communication, requirement for dispersed configuration management and monitoring.
-    - Unchanging:  
+    - Monolithic:  
 Benefits: Easy testing, straightforward development, deployment, and management.  
 - Drawbacks: Tough to scale, tightly coupled, one deployment for the entire application, challenging to integrate new technologies.
 
