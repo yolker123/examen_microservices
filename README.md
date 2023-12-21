@@ -1,14 +1,48 @@
 # examen_microservices
 VOLPELLIERE Anthony
 
-Q1 : Microservices architecture is a style of software architecture where an application is developed as a set of small, independent services, each running a unique process and communicating via HTTP APIs. This differs from a monolithic application where all processes are tightly coupled and run as a single entity.
 
-Q2 : - Microservices :  
-- Advantages: Scalability, flexibility, independent deployment, resilience, ease of maintenance and integration of new technologies.  
-- Disadvantages: Management complexity, communication challenges between services, need for distributed configuration management and monitoring.
-    - Monolithic:  
-- Advantages: Simplicity of development, deployment and management, ease of testing.  
-- Disadvantages: Difficulty of scaling, strong coupling, single deployment for the whole application, difficulty of integrating new technologies.
+EXO1
+
+**create the package.json**
+
+npm init -y 
+
+**create the package-lock.json**
+
+npm install http
+
+**Create the image from the Doclerfile**
+
+docker build -t examen-nodejs .
+
+**Run the container**
+
+docker run -p 8080:8080  examen-nodejs
+
+**Push on docker hub**
+
+docker login
+docker tag examen-nodejs:latest yolker123/examen-nodejs:latest
+docker push yolker123/examen-nodejs:latest
+
+**KUBERNETES**
+
+minikube start
+
+kubectl apply -f node-deployment.yaml
+kubectl apply -f autoscaling_hpa.yaml
+
+
+EXO2
+
+Q1 : With microservices architecture, a program is created as a collection of tiny, self-contained services that interface with one another using HTTP APIs and each execute a distinct process. This contrasts with a monolithic application, in which every process is closely connected to every other and functions as a single unit.
+
+Q2 : Microservices: - Benefits include ease of maintenance, scalability, flexibility, autonomous deployment, robustness, and integration with new technologies.  
+- Drawbacks: Complicated management, difficult inter-service communication, requirement for dispersed configuration management and monitoring.
+    - Unchanging:  
+Benefits: Easy testing, straightforward development, deployment, and management.  
+- Drawbacks: Tough to scale, tightly coupled, one deployment for the entire application, challenging to integrate new technologies.
 
 Q3 : The application must be divided according to functionalities.  On a large application, each service can have its own frontend, backend and database. A small application can separate these parts into 3. This reduces complexity, improves maintainability and facilitates scalability and upgrades.
 

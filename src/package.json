@@ -1,0 +1,16 @@
+{
+  "name": "examen_microservices",
+  "version": "1.0.0",
+  "description": "VOLPELLIERE Anthony",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node count-serveur.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
+}
